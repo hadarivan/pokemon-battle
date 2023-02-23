@@ -49,8 +49,8 @@ function App() {
   }
 
   const Attack = () => {
-    let tmpMyDice = Math.floor(Math.random() * (6 - 1 + 1) + 1)
-    let tmpOpponentDice = (Math.floor(Math.random() * (6 - 1 + 1) + 1))
+    let tmpMyDice = Math.floor((Math.random() * 6) + 1)
+    let tmpOpponentDice = Math.floor((Math.random() * 6) + 1)
     setMyDice(tmpMyDice)
     setopponentDice(tmpOpponentDice)
 
@@ -97,7 +97,7 @@ function App() {
 
   const AttackAgain = () => {
     if (attackAgainMyPlayer) {
-      let tmpMyDice = Math.floor(Math.random() * (6 - 1 + 1) + 1)
+      let tmpMyDice = Math.floor((Math.random() * 6) + 1)
       setMyDice(tmpMyDice)
       let tmpOpponentScore = opponentScore - tmpMyDice
       if (tmpOpponentScore <= 0) {
@@ -113,7 +113,7 @@ function App() {
       setattackAgainMyPlayer(false)
     }
     if (attackAgainMyOpponent) {
-      let tmpOpponentDice = Math.floor(Math.random() * (6 - 1 + 1) + 1)
+      let tmpOpponentDice = Math.floor((Math.random() * 6) + 1)
       setopponentDice(tmpOpponentDice)
       let tmpMyScore = myPlayerScore - tmpOpponentDice
       if (tmpMyScore <= 0) {
